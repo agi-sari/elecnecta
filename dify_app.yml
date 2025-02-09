@@ -1,0 +1,1957 @@
+app:
+  description: '
+
+    '
+  icon: japan
+  icon_background: '#D1E0FF'
+  mode: advanced-chat
+  name: elecnecta
+  use_icon_as_answer_icon: true
+kind: app
+version: 0.1.5
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        image_file_size_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: こんにちは！選択肢を選んで、相談を開始するボタンを押してください。
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions:
+    - 相談を開始する
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        sourceType: template-transform
+        targetType: answer
+      id: 1739075856553-source-answer-target
+      selected: false
+      source: '1739075856553'
+      sourceHandle: source
+      target: answer
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: code
+      id: llm-source-1739076466655-target
+      selected: false
+      source: llm
+      sourceHandle: source
+      target: '1739076466655'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: template-transform
+      id: 1739076466655-source-1739075856553-target
+      selected: false
+      source: '1739076466655'
+      sourceHandle: source
+      target: '1739075856553'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: start
+        targetType: question-classifier
+      id: 1739073563671-source-1739078889905-target
+      selected: false
+      source: '1739073563671'
+      sourceHandle: source
+      target: '1739078889905'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: question-classifier
+        targetType: llm
+      id: 1739078889905-1-llm-target
+      selected: false
+      source: '1739078889905'
+      sourceHandle: '1'
+      target: llm
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: question-classifier
+        targetType: llm
+      id: 1739078889905-2-1739078991493-target
+      selected: false
+      source: '1739078889905'
+      sourceHandle: '2'
+      target: '1739078991493'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: code
+      id: 1739078991493-source-17390796510570-target
+      selected: false
+      source: '1739078991493'
+      sourceHandle: source
+      target: '17390796510570'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: template-transform
+      id: 17390796510570-source-17390797242740-target
+      selected: false
+      source: '17390796510570'
+      sourceHandle: source
+      target: '17390797242740'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: template-transform
+        targetType: answer
+      id: 17390797242740-source-17390798602770-target
+      selected: false
+      source: '17390797242740'
+      sourceHandle: source
+      target: '17390798602770'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: question-classifier
+        targetType: llm
+      id: 1739078889905-1739079948192-17390799647520-target
+      selected: false
+      source: '1739078889905'
+      sourceHandle: '1739079948192'
+      target: '17390799647520'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: answer
+      id: 1739080852441-source-1739081579319-target
+      selected: false
+      source: '1739080852441'
+      sourceHandle: source
+      target: '1739081579319'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: template-transform
+        targetType: tool
+      id: 17390874811580-source-17390876546290-target
+      selected: false
+      source: '17390874811580'
+      sourceHandle: source
+      target: '17390876546290'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: template-transform
+        targetType: tool
+      id: 17390874790630-source-17390876525410-target
+      selected: false
+      source: '17390874790630'
+      sourceHandle: source
+      target: '17390876525410'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: template-transform
+        targetType: tool
+      id: 17390874744540-source-17390876489260-target
+      selected: false
+      source: '17390874744540'
+      sourceHandle: source
+      target: '17390876489260'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: tool
+        targetType: llm
+      id: 17390876489260-source-1739087798170-target
+      selected: false
+      source: '17390876489260'
+      sourceHandle: source
+      target: '1739087798170'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: tool
+        targetType: llm
+      id: 17390876525410-source-17390881926960-target
+      selected: false
+      source: '17390876525410'
+      sourceHandle: source
+      target: '17390881926960'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: tool
+        targetType: llm
+      id: 17390876546290-source-17390881902030-target
+      selected: false
+      source: '17390876546290'
+      sourceHandle: source
+      target: '17390881902030'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: variable-aggregator
+        targetType: llm
+      id: 1739088365159-source-1739080852441-target
+      selected: false
+      source: '1739088365159'
+      sourceHandle: source
+      target: '1739080852441'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: template-transform
+        targetType: tool
+      id: 1739085645934-source-17390885980320-target
+      selected: false
+      source: '1739085645934'
+      sourceHandle: source
+      target: '17390885980320'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: tool
+        targetType: llm
+      id: 17390885980320-source-17390886187380-target
+      selected: false
+      source: '17390885980320'
+      sourceHandle: source
+      target: '17390886187380'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: code
+      id: 17390886187380-source-1739107862257-target
+      selected: false
+      source: '17390886187380'
+      sourceHandle: source
+      target: '1739107862257'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: code
+      id: 1739087798170-source-1739108199647-target
+      selected: false
+      source: '1739087798170'
+      sourceHandle: source
+      target: '1739108199647'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: code
+      id: 17390881902030-source-1739108213604-target
+      selected: false
+      source: '17390881902030'
+      sourceHandle: source
+      target: '1739108213604'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: code
+      id: 17390881926960-source-1739108225795-target
+      selected: false
+      source: '17390881926960'
+      sourceHandle: source
+      target: '1739108225795'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: tool
+      id: 1739107862257-source-1739112292304-target
+      selected: false
+      source: '1739107862257'
+      sourceHandle: source
+      target: '1739112292304'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: tool
+        targetType: variable-aggregator
+      id: 1739112292304-source-1739088365159-target
+      selected: false
+      source: '1739112292304'
+      sourceHandle: source
+      target: '1739088365159'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: tool
+      id: 1739108199647-source-17391127307910-target
+      source: '1739108199647'
+      sourceHandle: source
+      target: '17391127307910'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: tool
+      id: 1739108213604-source-17391127511740-target
+      source: '1739108213604'
+      sourceHandle: source
+      target: '17391127511740'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: tool
+      id: 1739108225795-source-17391127533500-target
+      source: '1739108225795'
+      sourceHandle: source
+      target: '17391127533500'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: tool
+        targetType: variable-aggregator
+      id: 17391127307910-source-1739088365159-target
+      source: '17391127307910'
+      sourceHandle: source
+      target: '1739088365159'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: tool
+        targetType: variable-aggregator
+      id: 17391127511740-source-1739088365159-target
+      source: '17391127511740'
+      sourceHandle: source
+      target: '1739088365159'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: tool
+        targetType: variable-aggregator
+      id: 17391127533500-source-1739088365159-target
+      source: '17391127533500'
+      sourceHandle: source
+      target: '1739088365159'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: code
+      id: 17390799647520-source-1739113402774-target
+      source: '17390799647520'
+      sourceHandle: source
+      target: '1739113402774'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: template-transform
+      id: 1739113402774-source-1739085645934-target
+      source: '1739113402774'
+      sourceHandle: source
+      target: '1739085645934'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: template-transform
+      id: 1739113402774-source-17390874744540-target
+      source: '1739113402774'
+      sourceHandle: source
+      target: '17390874744540'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: template-transform
+      id: 1739113402774-source-17390874811580-target
+      source: '1739113402774'
+      sourceHandle: source
+      target: '17390874811580'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: template-transform
+      id: 1739113402774-source-17390874790630-target
+      source: '1739113402774'
+      sourceHandle: source
+      target: '17390874790630'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: ''
+        selected: false
+        title: 開始
+        type: start
+        variables:
+        - label: 性別
+          max_length: 48
+          options:
+          - 男性
+          - 女性
+          - 答えたくない
+          required: true
+          type: select
+          variable: gender
+        - label: 年代
+          max_length: 48
+          options:
+          - 〜10代
+          - 20代
+          - 30代
+          - 40代
+          - 50代
+          - 60代
+          - 70代
+          - 80代
+          - 90代
+          - 100代〜
+          required: true
+          type: select
+          variable: age
+        - label: 職業
+          max_length: 48
+          options:
+          - 会社員
+          - 公務員
+          - 事業主
+          - 投資家
+          - フリーランス
+          - アルバイト
+          - その他
+          required: true
+          type: select
+          variable: job
+        - label: 居住地
+          max_length: 48
+          options:
+          - 北海道
+          - 東北地方
+          - 関東地方
+          - 中部地方
+          - 北陸地方
+          - 近畿地方
+          - 中国地方
+          - 四国地方
+          - 九州地方
+          - 沖縄
+          required: true
+          type: select
+          variable: place
+      height: 168
+      id: '1739073563671'
+      position:
+        x: 30
+        y: 322
+      positionAbsolute:
+        x: 30
+        y: 322
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        memory:
+          query_prompt_template: 'まず最初に、以下のユーザー属性をもとに、そのユーザーが高い関心を持つ政治テーマを考え、候補をJSON形式で3つ挙げてください。前置きなしでJSONだけを簡潔に示してくださいね。
+
+
+            ## ユーザー属性
+
+            性別：{{#1739073563671.gender#}}
+
+            年代：{{#1739073563671.age#}}
+
+            職業：{{#1739073563671.job#}}
+
+            居住地：{{#1739073563671.place#}}
+
+
+            ## テーマ一覧
+
+            経済
+
+            財政・税
+
+            行政・政治改革
+
+            働き方
+
+            子育て・教育
+
+            若者・高等教育
+
+            年金
+
+            医療・介護
+
+            感染症対策
+
+            日米関係
+
+            外交・安全保障
+
+            憲法改正・皇室
+
+            エネルギー・環境
+
+            復興・災害
+
+            ジェンダー・LGBTQ+
+
+
+            ## ユーザーメッセージ
+
+            {{#sys.query#}}
+
+
+            ## 出力例
+
+            { "theme1": "働き方", "theme2": "子育て・教育", "theme3": "年金" }'
+          role_prefix:
+            assistant: ''
+            user: ''
+          window:
+            enabled: true
+            size: 50
+        model:
+          completion_params:
+            temperature: 0.5
+          mode: chat
+          name: gemini-2.0-flash-exp
+          provider: google
+        prompt_template:
+        - id: afaaec0c-04e9-4909-9f38-ab593a4e6255
+          role: system
+          text: 'あなたはプロの政策アナリストです。ユーザーが支持すべき政党を選ぶためのサポートをしてください。
+
+
+            ## 段取り
+
+            1. テーマを選ぶ
+
+            2. テーマの中で論点を選ぶ
+
+            3. 論点についての各政党の政策を調べる
+
+            4. 政党と政策を比較レポートにまとめる'
+        retry_config:
+          max_retries: 3
+          retry_enabled: false
+          retry_interval: 1000
+        selected: false
+        title: テーマの絞り込み
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 98
+      id: llm
+      position:
+        x: 638
+        y: 322
+      positionAbsolute:
+        x: 638
+        y: 322
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        answer: '{{#1739075856553.output#}}'
+        desc: ''
+        selected: false
+        title: テーマ選択
+        type: answer
+        variables: []
+      height: 103
+      id: answer
+      position:
+        x: 1550
+        y: 322
+      positionAbsolute:
+        x: 1550
+        y: 322
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        selected: false
+        template: '<p></p>
+
+          <p>あなたに関連しそうなテーマを選びました。どれが気になりますか？</p>
+
+
+          <button data-message="{{ result[0].theme }}">{{ result[0].theme }}</button>
+          <button data-message="{{ result[1].theme }}">{{ result[1].theme }}</button>
+          <button data-message="{{ result[2].theme }}">{{ result[2].theme }}</button>
+
+          '
+        title: テーマ選択画面
+        type: template-transform
+        variables:
+        - value_selector:
+          - llm
+          - text
+          variable: text
+        - value_selector:
+          - '1739076466655'
+          - result
+          variable: result
+      height: 54
+      id: '1739075856553'
+      position:
+        x: 1246
+        y: 322
+      positionAbsolute:
+        x: 1246
+        y: 322
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "import json\nimport re\n\ndef main(arg1: str) -> dict:\n    # Markdownのコードブロック（```json\
+          \ と ```）を削除する\n    cleaned = re.sub(r'^```(?:json)?\\s*', '', arg1)\n  \
+          \  cleaned = re.sub(r'\\s*```$', '', cleaned)\n\n    # JSON文字列をPythonの辞書型に変換\n\
+          \    data = json.loads(cleaned)\n\n    # 各テーマの値を取り出す\n    theme1 = data[\"\
+          theme1\"]\n    theme2 = data[\"theme2\"]\n    theme3 = data[\"theme3\"]\n\
+          \n    # 各テーマの文字列をオブジェクトに包んでリストにする\n    result_array = [\n        {\"theme\"\
+          : theme1},\n        {\"theme\": theme2},\n        {\"theme\": theme3}\n\
+          \    ]\n    \n    # 出力として、\"result\"キーにオブジェクトのリストをセットする\n    return {\"\
+          result\": result_array}"
+        code_language: python3
+        desc: ''
+        outputs:
+          result:
+            children: null
+            type: array[object]
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        title: JSONパース1
+        type: code
+        variables:
+        - value_selector:
+          - llm
+          - text
+          variable: arg1
+      height: 79
+      id: '1739076466655'
+      position:
+        x: 942
+        y: 322
+      positionAbsolute:
+        x: 942
+        y: 322
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        classes:
+        - id: '1'
+          name: 相談の開始をお願いされた場合
+        - id: '2'
+          name: ジャンル、テーマを与えられた場合（例：子育て・教育）
+        - id: '1739079948192'
+          name: 政策の具体的な議題を与えられた場合（例：物価対策について）
+        desc: ''
+        instruction: 'あなたはプロの政策アナリストです。ユーザーが支持すべき政党を選ぶためのサポートをしてください。
+
+
+          ## 段取り
+
+          1. テーマを選ぶ
+
+          2. テーマの中で論点を選ぶ
+
+          3. 論点についての各政党の政策を調べる
+
+          4. 政党と政策を比較レポートにまとめる'
+        instructions: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gemini-1.5-pro-latest
+          provider: google
+        query_variable_selector:
+        - '1739073563671'
+        - sys.query
+        selected: false
+        title: 質問分類器
+        topics: []
+        type: question-classifier
+        vision:
+          enabled: false
+      height: 244
+      id: '1739078889905'
+      position:
+        x: 334
+        y: 322
+      positionAbsolute:
+        x: 334
+        y: 322
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        memory:
+          query_prompt_template: '{{#sys.query#}}'
+          role_prefix:
+            assistant: ''
+            user: ''
+          window:
+            enabled: true
+            size: 50
+        model:
+          completion_params:
+            temperature: 0.5
+          mode: chat
+          name: gemini-2.0-flash-exp
+          provider: google
+        prompt_template:
+        - id: 2cf676b6-cc44-4adc-8bed-1f3cece373ed
+          role: system
+          text: 'あなたはプロの政策アナリストです。ユーザーが支持すべき政党を選ぶためのサポートをしてください。
+
+
+            ## 段取り
+
+            1. テーマを選ぶ
+
+            2. テーマの中で論点を選ぶ
+
+            3. 論点についての各政党の政策を調べる
+
+            4. 政党と政策を比較レポートにまとめる'
+        - id: 5b201fe7-d534-4c3f-9556-7c73aa5ea5d6
+          role: user
+          text: '次に、与えられたテーマをもとに、ユーザーの関心が高そうな政策の論点をJSON形式で3つ挙げてください。前置きなしでJSONだけを簡潔に示してくださいね。
+
+
+            ## ユーザーメッセージ
+
+            {{#sys.query#}}
+
+
+            ## 出力例1
+
+            { "topic1": "児童手当について", "topic2": "出産費用について", "topic3": "高校無償化について" }
+
+
+            ## 出力例2
+
+            { "topic1": "物価対策について", "topic2": "脱炭素への取り組みについて", "topic3": "原発再稼働について"
+            }'
+        selected: false
+        title: 論点出し
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 98
+      id: '1739078991493'
+      position:
+        x: 638
+        y: 465
+      positionAbsolute:
+        x: 638
+        y: 465
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "import json\nimport re\n\ndef main(arg1: str) -> dict:\n    # Markdownのコードブロック（```json\
+          \ と ```）を削除する\n    cleaned = re.sub(r'^```(?:json)?\\s*', '', arg1)\n  \
+          \  cleaned = re.sub(r'\\s*```$', '', cleaned)\n\n    # JSON文字列をPythonの辞書型に変換\n\
+          \    data = json.loads(cleaned)\n\n    # 各テーマの値を取り出す\n    topic1 = data[\"\
+          topic1\"]\n    topic2 = data[\"topic2\"]\n    topic3 = data[\"topic3\"]\n\
+          \n    # 各テーマの文字列をオブジェクトに包んでリストにする\n    result_array = [\n        {\"topic\"\
+          : topic1},\n        {\"topic\": topic2},\n        {\"topic\": topic3}\n\
+          \    ]\n    \n    # 出力として、\"result\"キーにオブジェクトのリストをセットする\n    return {\"\
+          result\": result_array}"
+        code_language: python3
+        desc: ''
+        outputs:
+          result:
+            children: null
+            type: array[object]
+        retry_config:
+          max_retries: 3
+          retry_enabled: false
+          retry_interval: 1000
+        selected: false
+        title: JSONパース2
+        type: code
+        variables:
+        - value_selector:
+          - '1739078991493'
+          - text
+          variable: arg1
+      height: 54
+      id: '17390796510570'
+      position:
+        x: 942
+        y: 477.5
+      positionAbsolute:
+        x: 942
+        y: 477.5
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        selected: false
+        template: '<p></p>
+
+          <p>具体的な論点を挙げました。気になるものを選んでみてください。</p>
+
+
+          <button data-message="{{ result[0].topic }}">{{ result[0].topic }}</button>
+          <button data-message="{{ result[1].topic }}">{{ result[1].topic }}</button>
+          <button data-message="{{ result[2].topic }}">{{ result[2].topic }}</button>
+
+          '
+        title: 論点選択画面
+        type: template-transform
+        variables:
+        - value_selector:
+          - '1739078991493'
+          - text
+          variable: text
+        - value_selector:
+          - '17390796510570'
+          - result
+          variable: result
+      height: 54
+      id: '17390797242740'
+      position:
+        x: 1246
+        y: 465
+      positionAbsolute:
+        x: 1246
+        y: 465
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        answer: '{{#17390797242740.output#}}'
+        desc: ''
+        selected: false
+        title: 論点選択
+        type: answer
+        variables: []
+      height: 103
+      id: '17390798602770'
+      position:
+        x: 1550
+        y: 465
+      positionAbsolute:
+        x: 1550
+        y: 465
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        memory:
+          query_prompt_template: '{{#sys.query#}}'
+          role_prefix:
+            assistant: ''
+            user: ''
+          window:
+            enabled: true
+            size: 50
+        model:
+          completion_params:
+            temperature: 0.5
+          mode: chat
+          name: gemini-2.0-flash-exp
+          provider: google
+        prompt_template:
+        - id: 2cf676b6-cc44-4adc-8bed-1f3cece373ed
+          role: system
+          text: 'あなたはプロの政策アナリストです。ユーザーが支持すべき政党を選ぶためのサポートをしてください。
+
+
+            ## 段取り
+
+            1. テーマを選ぶ
+
+            2. テーマの中で論点を選ぶ
+
+            3. 論点についての各政党の政策を調べる
+
+            4. 政党と政策を比較レポートにまとめる'
+        - id: 5b201fe7-d534-4c3f-9556-7c73aa5ea5d6
+          role: user
+          text: '次に、政策の論点について各政党がどのような意見を掲げているかを調査します。Google検索で調べますので、最適な検索クエリをJSON形式で4個挙げてください。前置きなしでJSONだけを簡潔に示してくださいね。
+
+
+            ## ユーザーメッセージ
+
+            {{#sys.query#}}
+
+
+            ただし、賛成、反対、保守、リベラル、右派、左派など特定の価値観やスタンスに偏った情報だけを集めるのではなく、多様な情報を信頼できる情報源から調査できるような検索クエリを揃えてください。
+
+
+            ## 政党一覧
+
+            自由民主党
+
+            立憲民主党
+
+            公明党
+
+            日本維新の会
+
+            国民民主党
+
+            日本共産党
+
+            れいわ新選組
+
+            社会民主党
+
+            参政党
+
+
+            ## 出力例
+
+            { "query1": "児童手当 自民党", "query2": "日本維新の会 マニフェスト", "query3": "民主党 原発再稼働"
+            }・・・'
+        selected: false
+        title: クエリ出し
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 98
+      id: '17390799647520'
+      position:
+        x: 638
+        y: 603
+      positionAbsolute:
+        x: 638
+        y: 603
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        memory:
+          query_prompt_template: ''
+          role_prefix:
+            assistant: ''
+            user: ''
+          window:
+            enabled: true
+            size: 50
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gemini-2.0-pro-exp-02-05
+          provider: google
+        prompt_template:
+        - id: 3fc38c00-93dd-455a-b36a-ac1406b2cfef
+          role: system
+          text: 'あなたはプロの政策アナリストです。ユーザーが支持すべき政党を選ぶためのサポートをしてください。
+
+
+            ## 段取り
+
+            1. テーマを選ぶ
+
+            2. テーマの中で論点を選ぶ
+
+            3. 論点についての各政党の政策を調べる
+
+            4. 政党と政策を比較レポートにまとめる'
+        - id: 0da9c132-909a-41a1-bfc4-a50015a08016
+          role: user
+          text: '今の論点に対して、調査の結果をもとに、各政党が掲げる政策の概要とスタンスをわかりやすく説明してください。最低3つの政党を挙げ、詳しく解説してください。
+
+
+            ## ユーザーの年代
+
+            {{#1739073563671.age#}}
+
+
+            ## 政策の論点
+
+            {{#sys.query#}}
+
+
+            ## 調査結果
+
+            {{#1739088365159.Group1#}}
+
+
+            ## 制約
+
+            ・説明の根拠となる情報ソースを必ずリンクで示すこと。また、前置きやポイントは不要です。各政党の比較にフォーカスしてください。
+
+            ・必ず日本語で返答すること。'
+        selected: false
+        title: オンライン調査
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 98
+      id: '1739080852441'
+      position:
+        x: 3070
+        y: 967
+      positionAbsolute:
+        x: 3070
+        y: 967
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        answer: '{{#1739080852441.text#}}'
+        desc: ''
+        selected: false
+        title: 最終回答
+        type: answer
+        variables: []
+      height: 103
+      id: '1739081579319'
+      position:
+        x: 3374
+        y: 967
+      positionAbsolute:
+        x: 3374
+        y: 967
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        selected: false
+        template: '{{ result[0].query }}'
+        title: クエリ定義1
+        type: template-transform
+        variables:
+        - value_selector:
+          - '1739113402774'
+          - result
+          variable: result
+      height: 54
+      id: '1739085645934'
+      position:
+        x: 1246
+        y: 603
+      positionAbsolute:
+        x: 1246
+        y: 603
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        selected: false
+        template: '{{ result[1].query }}'
+        title: クエリ定義6
+        type: template-transform
+        variables:
+        - value_selector:
+          - '1739113402774'
+          - result
+          variable: result
+      height: 54
+      id: '17390874744540'
+      position:
+        x: 1246
+        y: 967
+      positionAbsolute:
+        x: 1246
+        y: 967
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        selected: false
+        template: '{{ result[3].query }}'
+        title: クエリ定義4
+        type: template-transform
+        variables:
+        - value_selector:
+          - '1739113402774'
+          - result
+          variable: result
+      height: 54
+      id: '17390874790630'
+      position:
+        x: 1246
+        y: 1695
+      positionAbsolute:
+        x: 1246
+        y: 1695
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        selected: false
+        template: '{{ result[2].query }}'
+        title: クエリ定義3
+        type: template-transform
+        variables:
+        - value_selector:
+          - '1739113402774'
+          - result
+          variable: result
+      height: 54
+      id: '17390874811580'
+      position:
+        x: 1246
+        y: 1331
+      positionAbsolute:
+        x: 1246
+        y: 1331
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        provider_id: a5f69bb2-159d-410b-9048-8fe5ed197511
+        provider_name: Google Search API Tool 2
+        provider_type: workflow
+        selected: false
+        title: 検索2
+        tool_configurations: {}
+        tool_label: Google Search API Tool 2
+        tool_name: CustomGoogleSearchGet2
+        tool_parameters:
+          input_query:
+            type: mixed
+            value: '{{#17390874744540.output#}}'
+          target_rank_range:
+            type: constant
+            value: 3
+        type: tool
+      height: 54
+      id: '17390876489260'
+      position:
+        x: 1550
+        y: 991.5
+      positionAbsolute:
+        x: 1550
+        y: 991.5
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        provider_id: a5f69bb2-159d-410b-9048-8fe5ed197511
+        provider_name: Google Search API Tool 2
+        provider_type: workflow
+        selected: false
+        title: 検索4
+        tool_configurations: {}
+        tool_label: Google Search API Tool 2
+        tool_name: CustomGoogleSearchGet2
+        tool_parameters:
+          input_query:
+            type: mixed
+            value: '{{#17390874790630.output#}}'
+          target_rank_range:
+            type: constant
+            value: 3
+        type: tool
+      height: 54
+      id: '17390876525410'
+      position:
+        x: 1550
+        y: 1719.5
+      positionAbsolute:
+        x: 1550
+        y: 1719.5
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        provider_id: a5f69bb2-159d-410b-9048-8fe5ed197511
+        provider_name: Google Search API Tool 2
+        provider_type: workflow
+        selected: false
+        title: 検索3
+        tool_configurations: {}
+        tool_label: Google Search API Tool 2
+        tool_name: CustomGoogleSearchGet2
+        tool_parameters:
+          input_query:
+            type: mixed
+            value: '{{#17390874811580.output#}}'
+          target_rank_range:
+            type: constant
+            value: 3
+        type: tool
+      height: 54
+      id: '17390876546290'
+      position:
+        x: 1550
+        y: 1355.5
+      positionAbsolute:
+        x: 1550
+        y: 1355.5
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gemini-1.5-pro-002
+          provider: google
+        prompt_template:
+        - id: 7f6572ac-08b7-4713-bf04-eb210273dc9b
+          role: system
+          text: あなたはプロの政策アナリストです。ユーザーが支持すべき政党を選ぶためのサポートをしてください。
+        - id: f8eb8727-6fab-4f3d-9303-e71ce3f6be61
+          role: user
+          text: 'Google検索の上位記事リストから、最もユーザーへの説明に役立つ記事のURLを一つだけ回答してください。URLは改行コードが含まれることがあるので、適切なクレンジングをしてアクセス可能なURLのみを出力してください。前後の説明は不要。
+
+
+            ## Google検索結果
+
+            {{#17390876489260.text#}}
+
+
+            ## ユーザーが各政党の政策について知りたいこと
+
+            {{#sys.query#}}'
+        selected: false
+        title: 記事探索2
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 98
+      id: '1739087798170'
+      position:
+        x: 1854
+        y: 967
+      positionAbsolute:
+        x: 1854
+        y: 967
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gemini-1.5-pro-002
+          provider: google
+        prompt_template:
+        - id: 7f6572ac-08b7-4713-bf04-eb210273dc9b
+          role: system
+          text: あなたはプロの政策アナリストです。ユーザーが支持すべき政党を選ぶためのサポートをしてください。
+        - id: f8eb8727-6fab-4f3d-9303-e71ce3f6be61
+          role: user
+          text: 'Google検索の上位記事リストから、最もユーザーへの説明に役立つ記事のURLを一つだけ回答してください。URLは改行コードが含まれることがあるので、適切なクレンジングをしてアクセス可能なURLのみを出力してください。前後の説明は不要。
+
+
+            ## Google検索結果
+
+            {{#17390876546290.text#}}
+
+
+            ## ユーザーが各政党の政策について知りたいこと
+
+            {{#sys.query#}}'
+        selected: false
+        title: 記事探索3
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 98
+      id: '17390881902030'
+      position:
+        x: 1854
+        y: 1331
+      positionAbsolute:
+        x: 1854
+        y: 1331
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gemini-1.5-pro-002
+          provider: google
+        prompt_template:
+        - id: 7f6572ac-08b7-4713-bf04-eb210273dc9b
+          role: system
+          text: あなたはプロの政策アナリストです。ユーザーが支持すべき政党を選ぶためのサポートをしてください。
+        - id: f8eb8727-6fab-4f3d-9303-e71ce3f6be61
+          role: user
+          text: 'Google検索の上位記事リストから、最もユーザーへの説明に役立つ記事のURLを一つだけ回答してください。URLは改行コードが含まれることがあるので、適切なクレンジングをしてアクセス可能なURLのみを出力してください。前後の説明は不要。
+
+
+            ## Google検索結果
+
+            {{#17390876525410.text#}}
+
+
+            ## ユーザーが各政党の政策について知りたいこと
+
+            {{#sys.query#}}'
+        selected: false
+        title: 記事探索4
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 98
+      id: '17390881926960'
+      position:
+        x: 1854
+        y: 1695
+      positionAbsolute:
+        x: 1854
+        y: 1695
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        advanced_settings:
+          group_enabled: true
+          groups:
+          - groupId: be400ed1-36a0-4e2e-9fec-a73a600081ce
+            group_name: Group1
+            output_type: string
+            variables:
+            - - '1739112292304'
+              - text
+          - groupId: 38385e96-ecdb-42d9-bd27-9ae059e403d0
+            group_name: Group2
+            output_type: string
+            variables:
+            - - '17391127307910'
+              - text
+          - groupId: 5998b6a2-cb00-472d-aa6f-4cd69da9271c
+            group_name: Group3
+            output_type: string
+            variables:
+            - - '17391127511740'
+              - text
+          - groupId: 21db5127-44d4-46d2-8298-8e85107496b8
+            group_name: Group4
+            output_type: string
+            variables:
+            - - '17391127533500'
+              - text
+        desc: ''
+        output_type: string
+        selected: false
+        title: 変数集約器
+        type: variable-aggregator
+        variables:
+        - - '17390885980320'
+          - text
+      height: 268
+      id: '1739088365159'
+      position:
+        x: 2766
+        y: 967
+      positionAbsolute:
+        x: 2766
+        y: 967
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        provider_id: a5f69bb2-159d-410b-9048-8fe5ed197511
+        provider_name: Google Search API Tool 2
+        provider_type: workflow
+        selected: true
+        title: 検索1
+        tool_configurations: {}
+        tool_label: Google Search API Tool 2
+        tool_name: CustomGoogleSearchGet2
+        tool_parameters:
+          input_query:
+            type: mixed
+            value: '{{#1739085645934.output#}}'
+          target_rank_range:
+            type: constant
+            value: 3
+        type: tool
+      height: 54
+      id: '17390885980320'
+      position:
+        x: 1550
+        y: 627.5
+      positionAbsolute:
+        x: 1550
+        y: 627.5
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gemini-1.5-pro-002
+          provider: google
+        prompt_template:
+        - id: 7f6572ac-08b7-4713-bf04-eb210273dc9b
+          role: system
+          text: あなたはプロの政策アナリストです。ユーザーが支持すべき政党を選ぶためのサポートをしてください。
+        - id: f8eb8727-6fab-4f3d-9303-e71ce3f6be61
+          role: user
+          text: 'Google検索の上位記事リストから、最もユーザーへの説明に役立つ記事のURLを一つだけ回答してください。URLは改行コードが含まれることがあるので、適切なクレンジングをしてアクセス可能なURLのみを出力してください。前後の説明は不要。
+
+
+            ## Google検索結果
+
+            {{#17390885980320.text#}}
+
+
+            ## ユーザーが各政党の政策について知りたいこと
+
+            {{#sys.query#}}'
+        selected: false
+        title: 記事探索1
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 98
+      id: '17390886187380'
+      position:
+        x: 1854
+        y: 603
+      positionAbsolute:
+        x: 1854
+        y: 603
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "import requests\n\ndef main(arg1: str) -> dict:\n    # arg1 のURLから改行文字（実際の改行およびリテラルの\
+          \ \"\\n\"）を削除し、前後の空白も除去\n    cleaned_url = arg1.replace(\"\\n\", \"\").replace(\"\
+          \\\\n\", \"\").strip()\n    return {\"result\": cleaned_url}"
+        code_language: python3
+        desc: ''
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: クレンジング1
+        type: code
+        variables:
+        - value_selector:
+          - '17390886187380'
+          - text
+          variable: arg1
+      height: 54
+      id: '1739107862257'
+      position:
+        x: 2158
+        y: 603
+      positionAbsolute:
+        x: 2158
+        y: 603
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "import requests\n\ndef main(arg1: str) -> dict:\n    # arg1 のURLから改行文字（実際の改行およびリテラルの\
+          \ \"\\n\"）を削除し、前後の空白も除去\n    cleaned_url = arg1.replace(\"\\n\", \"\").replace(\"\
+          \\\\n\", \"\").strip()\n    return {\"result\": cleaned_url}"
+        code_language: python3
+        desc: ''
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: コード 2
+        type: code
+        variables:
+        - value_selector:
+          - '1739087798170'
+          - text
+          variable: arg1
+      height: 54
+      id: '1739108199647'
+      position:
+        x: 2158
+        y: 967
+      positionAbsolute:
+        x: 2158
+        y: 967
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "import requests\n\ndef main(arg1: str) -> dict:\n    # arg1 のURLから改行文字（実際の改行およびリテラルの\
+          \ \"\\n\"）を削除し、前後の空白も除去\n    cleaned_url = arg1.replace(\"\\n\", \"\").replace(\"\
+          \\\\n\", \"\").strip()\n    return {\"result\": cleaned_url}"
+        code_language: python3
+        desc: ''
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: コード 3
+        type: code
+        variables:
+        - value_selector:
+          - '17390881902030'
+          - text
+          variable: arg1
+      height: 54
+      id: '1739108213604'
+      position:
+        x: 2158
+        y: 1331
+      positionAbsolute:
+        x: 2158
+        y: 1331
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "import requests\n\ndef main(arg1: str) -> dict:\n    # arg1 のURLから改行文字（実際の改行およびリテラルの\
+          \ \"\\n\"）を削除し、前後の空白も除去\n    cleaned_url = arg1.replace(\"\\n\", \"\").replace(\"\
+          \\\\n\", \"\").strip()\n    return {\"result\": cleaned_url}"
+        code_language: python3
+        desc: ''
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: コード 4
+        type: code
+        variables:
+        - value_selector:
+          - '17390881926960'
+          - text
+          variable: arg1
+      height: 54
+      id: '1739108225795'
+      position:
+        x: 2158
+        y: 1695
+      positionAbsolute:
+        x: 2158
+        y: 1695
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        provider_id: firecrawl
+        provider_name: firecrawl
+        provider_type: builtin
+        selected: false
+        title: Scrape
+        tool_configurations:
+          excludeTags: null
+          formats: null
+          headers: null
+          includeTags: null
+          onlyMainContent: 0
+          prompt: null
+          schema: null
+          systemPrompt: null
+          timeout: 30000
+          waitFor: 0
+        tool_label: Scrape
+        tool_name: scrape
+        tool_parameters:
+          url:
+            type: mixed
+            value: '{{#1739107862257.result#}}'
+        type: tool
+      height: 324
+      id: '1739112292304'
+      position:
+        x: 2462
+        y: 603
+      positionAbsolute:
+        x: 2462
+        y: 603
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        provider_id: firecrawl
+        provider_name: firecrawl
+        provider_type: builtin
+        selected: false
+        title: Scrape (1)
+        tool_configurations:
+          excludeTags: null
+          formats: null
+          headers: null
+          includeTags: null
+          onlyMainContent: 0
+          prompt: null
+          schema: null
+          systemPrompt: null
+          timeout: 30000
+          waitFor: 0
+        tool_label: Scrape
+        tool_name: scrape
+        tool_parameters:
+          url:
+            type: mixed
+            value: '{{#1739108199647.result#}}'
+        type: tool
+      height: 324
+      id: '17391127307910'
+      position:
+        x: 2462
+        y: 967
+      positionAbsolute:
+        x: 2462
+        y: 967
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        provider_id: firecrawl
+        provider_name: firecrawl
+        provider_type: builtin
+        selected: false
+        title: Scrape (2)
+        tool_configurations:
+          excludeTags: null
+          formats: null
+          headers: null
+          includeTags: null
+          onlyMainContent: 0
+          prompt: null
+          schema: null
+          systemPrompt: null
+          timeout: 30000
+          waitFor: 0
+        tool_label: Scrape
+        tool_name: scrape
+        tool_parameters:
+          url:
+            type: mixed
+            value: '{{#1739108213604.result#}}'
+        type: tool
+      height: 324
+      id: '17391127511740'
+      position:
+        x: 2462
+        y: 1331
+      positionAbsolute:
+        x: 2462
+        y: 1331
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        provider_id: firecrawl
+        provider_name: firecrawl
+        provider_type: builtin
+        selected: false
+        title: Scrape (3)
+        tool_configurations:
+          excludeTags: null
+          formats: null
+          headers: null
+          includeTags: null
+          onlyMainContent: 0
+          prompt: null
+          schema: null
+          systemPrompt: null
+          timeout: 30000
+          waitFor: 0
+        tool_label: Scrape
+        tool_name: scrape
+        tool_parameters:
+          url:
+            type: mixed
+            value: '{{#1739108225795.result#}}'
+        type: tool
+      height: 324
+      id: '17391127533500'
+      position:
+        x: 2462
+        y: 1695
+      positionAbsolute:
+        x: 2462
+        y: 1695
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "import json\nimport re\n\ndef main(arg1: str) -> dict:\n    # Markdownのコードブロック（```json\
+          \ と ```）を削除する\n    cleaned = re.sub(r'^```(?:json)?\\s*', '', arg1.strip(),\
+          \ flags=re.MULTILINE)\n    cleaned = re.sub(r'\\s*```$', '', cleaned.strip(),\
+          \ flags=re.MULTILINE)\n\n    # JSON文字列をPythonのリスト型に変換\n    data = json.loads(cleaned)\n\
+          \n    # リスト内の各辞書の \"query\" キーを取り出す\n    result_array = [{\"query\": item[\"\
+          query\"]} for item in data]\n\n    # 出力として、\"result\"キーにオブジェクトのリストをセットする\n\
+          \    return {\"result\": result_array}\n"
+        code_language: python3
+        desc: ''
+        outputs:
+          result:
+            children: null
+            type: array[object]
+        selected: false
+        title: JSONパース3
+        type: code
+        variables:
+        - value_selector:
+          - '17390799647520'
+          - text
+          variable: arg1
+      height: 54
+      id: '1739113402774'
+      position:
+        x: 942
+        y: 615.5
+      positionAbsolute:
+        x: 942
+        y: 615.5
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    viewport:
+      x: 43.97902536604249
+      y: 14.779881194428015
+      zoom: 0.38223530091880564
